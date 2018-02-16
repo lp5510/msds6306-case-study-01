@@ -1,0 +1,137 @@
+#title: "Live Session Case Study 1"
+#author: "Luke Pierce"
+#date: "February 15, 2018"
+
+# work (wrn) env
+# setwd("J:/SMU/MSDS 6302 Doing Data Science/Lecture Assignments/Live Session Case Study 1")
+# setwd("Q:/SMU/MSDS 6302 Doing Data Science/Lecture Assignments/Live Session Case Study 1")
+
+# Notes
+# If anyone sees a way to steamline this code, go for it. I went for minimal but understandable (to me at least).
+# We could check for column similarity prior to merge, but I figured I would do that only if there was a problem
+# Data frame names probably could be improved
+# It would be cool if we could put the regression equation and r**2 on the final plot. I could not get it to work.
+
+===========================================================
+
+# Beers and Breweries dataset cleaning
+
+library(dplyr)
+
+# read beer csv
+# Use read.csv to read in beer.csv file 
+beer <- read.csv("Beers.csv", header = TRUE, sep=",", row.names = NULL)
+
+utils::View(beer)
+
+# Use read.csv to read in Breweries.csv file 
+brwy <- read.csv("Breweries.csv", header = TRUE, sep=",", row.names = NULL)
+
+utils::View(brwy)
+
+# in beer df rename column "Name" to "Beer" 
+beer <- rename(beer, Beer = Name)
+
+# in beer df rename column "Brewery_id"" to "Brew_ID" 
+beer <- rename(beer, Brew_ID = Brewery_id)
+
+# in brwy df rename column "Name" to "Brewery" 
+brwy <- rename(brwy, Brewery = Name)
+
+# Arrange beer df by Brew_ID
+beer <- arrange(beer, (Brew_ID))
+
+==========================================================
+
+# Questions:
+# 1) Breweries per state?
+
+# Count breweries per state
+BwryPerState <- count(brwy, State)
+
+# in beer df rename column "Brewery_id"" to "Brew_ID" 
+BwryPerState <- rename(BwryPerState, Breweries = n)
+
+summary(BwryPerState)
+utils::View(BwryPerState)
+
+# Sort by most to least
+BwryPerState <- arrange(BwryPerState, desc(Breweries))
+
+library(ggplot2)
+ggplot(BwryPerState, aes(x=reorder(State, Breweries), y=(Breweries), fill = "red")) + geom_bar(stat='identity') + coord_flip() + labs(title ="Breweries Per State", x = "State", y = "Number of Breweries") + theme(legend.position="none")
+
+# 2) Merge beer and brewery data. Print first and last 6 observations
+
+# QC
+str(beer)
+summary(beer)
+str(brwy)
+summary(brwy)
+
+# Merge data frames
+beerbrew <- dplyr::inner_join(beer, brwy, by = "Brew_ID")
+summary(beerbrew)
+
+# Sort columns (one option)
+beerbrew <- beerbrew[c("Beer_ID", "Beer", "Style", "Ounces", "ABV", "IBU", "Brew_ID", "Brewery", "City", "State")]
+
+summary(beerbrew)
+str(beerbrew)
+utils::View(beerbrew)
+
+# Check beerbrew
+
+head(beerbrew,6)
+tail(beerbrew,6)
+
+# 3) Report NA in each column
+
+sapply(beerbrew, function(x) sum(is.na(x)))
+
+# 4) Median ABV and IBU by state. Plot barchart.
+
+#NA removal (all)
+beerbrew <- beerbrew[complete.cases(beerbrew), ]
+
+utils::View(beerbrew)
+
+# Calculate median values for each obs of ABV and IBU by state using DoBy
+
+library(doBy)
+MedianABV <- summaryBy(ABV ~ State, data = beerbrew, FUN = median)
+MedianIBU <- summaryBy(IBU ~ State, data = beerbrew, FUN = median)
+utils::View(MedianABV)
+utils::View(MedianIBU)
+
+# Merge into one df
+ABV_IBU_median <- dplyr::inner_join(MedianABV, MedianIBU, by = "State")
+
+summary(ABV_IBU_median)
+str(ABV_IBU_median)
+
+# normalize and dual barplot ggplot here ***********************************************
+
+
+
+# 5) State with highest ABV? Highest IBU?
+	 
+# Most alcoholic beer (Kentucky)
+dplyr::top_n(beerbrew, 1, ABV)
+
+# Most bitter beer (Oregon)
+dplyr::top_n(beerbrew, 1, IBU)
+
+# 6) Summary statistics for the ABV variable
+
+summary(beerbrew$ABV)
+
+# 7) Generate scatter plot ABV vs IBU. Positive correlation between ABV and IBU
+# could be dressed up
+
+ggplot(beerbrew, aes(x=IBU, y=ABV)) +
+    geom_point(shape=1) +    # Use hollow circles
+    geom_smooth(method=lm)   # Add linear regression line 
+                             #  (by default includes 95% confidence region)
+
+
