@@ -23,13 +23,17 @@
             + Ounces
                 + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
                 + Contains NA's
-    + {Breweries By State](https://raw.githubusercontent.com/allthebits/msds6306-case-study-01/master/data/Breweries.csv)
+    + [Breweries By State](https://raw.githubusercontent.com/allthebits/msds6306-case-study-01/master/data/Breweries.csv)
         + Variable names
             + Brew_ID : Integer (1 - 558), No NA's
             + Brewery : String, No NA's
             + City : String, No NA's
             + State : 2 Characters, No NA's, 51 Unique Values
+1. Merged Data
 1. Data Modifications
     +
     +
 1. Tidy dataset
+    +
+    +
+1. Recipe for Tidy Dataset
