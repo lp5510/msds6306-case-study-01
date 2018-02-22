@@ -18,22 +18,8 @@ output:
 rm(list=ls())
 ```
 
-## Appendix
-### Source Code
-#### Required Libraries
-1. deplyr  - To Install: `1install.packages("deplyr")`
-1. ggplot2 - To Install: `1install.packages("ggplot2")`
-1. doBy    - To Install: `1install.packages("doBy")`
-
-#### Case Study Solution
-```{r, results='hide', message=FALSE, warning=FALSE}
-library(knitr)
-library(dplyr)
-library(ggplot2)
-library(doBy)
-```
-
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
+
 read_chunk('code/00_LoadAndPrepare.R')
 read_chunk('code/01_Question_01.R')
 read_chunk('code/02_Question_02.R')
@@ -47,6 +33,31 @@ read_chunk('code/07_Question_07.R')
 #    error in the editor.  However, if you run 'Knit', the document will build
 #    without error.  It will give you and error:  "Unexpected token '<'"
 #
+```
+
+## Project Description
+
+## Codebook
+```{r child = 'rmd/Codebook.rmd'}
+```
+
+## Answers to Project Questions
+```{r child = 'Answers.rmd'}
+```
+
+## Appendix
+### Source Code
+#### Required Libraries
+1. deplyr  - To Install: `1install.packages("deplyr")`
+1. ggplot2 - To Install: `1install.packages("ggplot2")`
+1. doBy    - To Install: `1install.packages("doBy")`
+
+#### Case Study Solution
+```{r, results='hide', message=FALSE, warning=FALSE}
+library(knitr)
+library(dplyr)
+library(ggplot2)
+library(doBy)
 ```
 
 ```{r}
