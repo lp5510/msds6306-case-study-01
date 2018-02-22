@@ -1,1 +1,35 @@
 ## Codebook
+1. Raw Data
+    + [Beer Names and Metrics](https://raw.githubusercontent.com/allthebits/msds6306-case-study-01/master/data/Beers.csv)
+        + Variable names
+            + Beer
+                + String
+                + No NA's
+            + Beer_ID 
+                + Integer - Range: (1 - 2692)
+                + No NA's
+            + ABV
+                + Real Number - Range (0.001 - 0.128)
+                + Contains NA's
+            + IBU
+                + Integer - Range (4 - 138)
+                + Contains NA's
+            + Brew_ID
+                + Integer - Range (1 - 558)
+                + No NA's
+            + Style
+                + String
+                + No NA's
+            + Ounces
+                + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
+                + Contains NA's
+    + {Breweries By State](https://raw.githubusercontent.com/allthebits/msds6306-case-study-01/master/data/Breweries.csv)
+        + Variable names
+            + Brew_ID : Integer (1 - 558), No NA's
+            + Brewery : String, No NA's
+            + City : String, No NA's
+            + State : 2 Characters, No NA's, 51 Unique Values
+1. Data Modifications
+    +
+    +
+1. Tidy dataset
