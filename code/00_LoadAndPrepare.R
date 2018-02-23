@@ -56,7 +56,7 @@ beer$Style <- gsub("Ã¨", "e", beer$Style)
 # Brewery file
 
 # Replace "Ã¶" with "o"
-brwy$Name <- gsub("Ã¶", "o", brwy$Name)
+brewery$Name <- gsub("Ã¶", "o", brewery$Name)
 
 # ========================================================================================
 
