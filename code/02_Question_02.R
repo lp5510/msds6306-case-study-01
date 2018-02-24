@@ -20,7 +20,6 @@ beerbrew <- beerbrew[c("Beer_ID", "Beer", "Style", "Ounces", "ABV", "IBU", "Brew
 
 summary(beerbrew)
 str(beerbrew)
-utils::View(beerbrew)
 
 # Check beerbrew
 
