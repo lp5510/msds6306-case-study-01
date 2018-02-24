@@ -29,11 +29,43 @@
             + Brewery : String, No NA's
             + City : String, No NA's
             + State : 2 Characters, No NA's, 51 Unique Values
-1. Merged Data
-1. Data Modifications
+2. Final Merged Data
++ [Beer and Brewery Names and Metrics]
+        + Variable names
+            + Beer_ID
+                + Integer - Range: (1 - 2692)
+                + No NA's
+            + Beer
+                + String - Range: (1 - 1372)
+                + No NA's
+            + Style    
+                + String
+                + No NA's
+            + Ounces
+                + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
+                + No NA's                
+            + ABV
+                + Real Number - Range (0.027 - 0.125)
+                + No NA's
+            + IBU
+                + Integer - Range (4 - 138)
+                + No NA's
+            + Brew_ID
+                + Integer - Range (1 - 547)
+                + No NA's
+            + Brewery
+                + String, No NA's
+            + City 
+                + String, No NA's
+            + State
+                + 2 Characters, No NA's, 51 Unique Values
+            + Ounces
+                + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
+                + No NA's
+3. Data Modifications
     +
     +
-1. Tidy dataset
+4. Tidy dataset
     +
     +
-1. Recipe for Tidy Dataset
+5. Recipe for Tidy Dataset
