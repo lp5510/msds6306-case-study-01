@@ -30,7 +30,7 @@
             + City : String, No NA's
             + State : 2 Characters, No NA's, 51 Unique Values
 2. Final Merged Data
-+ [Beer and Brewery Names and Metrics]
+    + [Beer and Brewery Names and Metrics]
         + Variable names
             + Beer_ID
                 + Integer - Range: (1 - 2692)
@@ -54,14 +54,14 @@
                 + Integer - Range (1 - 547)
                 + No NA's
             + Brewery
-                + String, No NA's
-            + City 
-                + String, No NA's
-            + State
-                + 2 Characters, No NA's, 51 Unique Values
-            + Ounces
-                + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
+                + String
                 + No NA's
+            + City 
+                + String
+                + No NA's
+            + State
+                + 2 Characters - 50 Unique Values
+                + No NA's 
 3. Data Modifications
     +
     +
