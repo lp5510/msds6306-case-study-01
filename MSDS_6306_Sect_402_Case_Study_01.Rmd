@@ -36,6 +36,7 @@ library(knitr)
 1. deplyr  - To Install: `1install.packages("deplyr")`
 1. ggplot2 - To Install: `1install.packages("ggplot2")`
 1. doBy    - To Install: `1install.packages("doBy")`
+1. stringr - To Install: `1install.packages("stringr")`
 
 #### Case Study Solution
 
@@ -43,6 +44,7 @@ library(knitr)
 library(dplyr)
 library(ggplot2)
 library(doBy)
+library(stringr)
 ```
 
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
