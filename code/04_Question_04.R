@@ -7,8 +7,6 @@
 #NA removal (all)
 beerbrew <- beerbrew[complete.cases(beerbrew), ]
 
-utils::View(beerbrew)
-
 # Calculate median values for each obs of ABV and IBU by state using DoBy
 
 MedianABV <- summaryBy(ABV ~ State, data = beerbrew, FUN = median)
