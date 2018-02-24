@@ -13,8 +13,6 @@ utils::View(beerbrew)
 
 MedianABV <- summaryBy(ABV ~ State, data = beerbrew, FUN = median)
 MedianIBU <- summaryBy(IBU ~ State, data = beerbrew, FUN = median)
-utils::View(MedianABV)
-utils::View(MedianIBU)
 
 # Merge into one df
 ABV_IBU_median <- dplyr::inner_join(MedianABV, MedianIBU, by = "State")
