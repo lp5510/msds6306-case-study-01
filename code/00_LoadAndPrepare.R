@@ -17,48 +17,22 @@ brewery <- read.csv(url(brewery_url), header = TRUE, sep=",", row.names = NULL)
 
 #===============================================================================
 
-# Replace/remove erroneous special characters present in Dataframes for Beer and Brewery
+# Convert UTF-8 format character data in Dataframes for Beer and Brewery
 
 # Beer file
 
-# Special character replacement/removal
+# Convert UTF-8 format in "beer$Name"
+beer$Name <- str_conv(beer$Name, "UTF-8")
 
-# Replace "â€™" with "'"
-beer$Name <- gsub("â€™", "'", beer$Name)
-
-# Replace "Ã¶" with "o"
-beer$Name <- gsub("Ã¶", "o", beer$Name)
-
-# Replace "Â°" with "°"
-beer$Name <- gsub("Â°", "°", beer$Name)
-
-# Replace "Ã©" with "e'"
-beer$Name <- gsub("Ã©", "e'", beer$Name)
-
-# Replace "Ã" with "i'"
-beer$Name <- gsub("Ã", "i'", beer$Name)
-
-# Replace "'¼" with "o'"
-beer$Name <- gsub("'¼", "o", beer$Name)
-
-# Remove "â„¢" character
-beer$Name <- gsub("â„¢", "", beer$Name)
-
-# Replace "Ã¶" with "o"
-beer$Style <- gsub("Ã¶", "o", beer$Style)
-
-# Replace "Ã¤" with "a"
-beer$Style <- gsub("Ã¤", "a", beer$Style)
-
-# Replace "Ã¨" with "e"
-beer$Style <- gsub("Ã¨", "e", beer$Style)
+# Convert UTF-8 format in "beer$Style"
+beer$Style <- str_conv(beer$Style, "UTF-8")
 
 # Brewery file
 
-# Replace "Ã¶" with "o"
-brewery$Name <- gsub("Ã¶", "o", brewery$Name)
+# Convert UTF-8 format in "beer$Style"
+brewery$Name <- str_conv(brewery$Name, "UTF-8")
 
-# ========================================================================================
+# ==============================================================================
 
 # Modify column/variable names on the Dataframes for Beer and Brewery
 
