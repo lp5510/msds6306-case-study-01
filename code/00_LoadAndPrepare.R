@@ -47,3 +47,9 @@ brewery <- rename(brewery, Brewery = Name)
 
 # Arrange beer df by Brew_ID
 beer <- arrange(beer, (Brew_ID))
+
+# Remove duplicates with all columns other than Brew_ID as criteria for removal
+beer <- beer[!duplicated(beer[c('Beer', 'ABV', 'IBU', 'Style', 'Ounces')]),]
+
+# Remove row.names column
+row.names(beer) <- NULL
