@@ -12,7 +12,6 @@ BreweryByState <- count(brewery, State)
 BreweryByState <- rename(BreweryByState, Breweries = n)
 
 summary(BreweryByState)
-utils::View(BreweryByState)
 
 # Sort by most to least
 BreweryByState <- arrange(BreweryByState, desc(Breweries))
