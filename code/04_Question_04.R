@@ -4,8 +4,6 @@
 #
 # Case Study 01 : Question 04) Median ABV and IBU by state. Plot barchart.
 # Requires the library:  'doBy'
-#NA removal (all)
-beerbrew <- beerbrew[complete.cases(beerbrew), ]
 
 # Calculate median values for each obs of ABV and IBU by state using DoBy
 

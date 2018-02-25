@@ -455,11 +455,11 @@ sapply(beerbrew, function(x) sum(is.na(x)))</code></pre>
 ##   State 
 ##       0</code></pre>
 <pre class="r"><code>#
+source('code/03_Question_03.tidy.R')
+#
 #
 # Case Study 01 : Question 04) Median ABV and IBU by state. Plot barchart.
 # Requires the library:  'doBy'
-#NA removal (all)
-beerbrew &lt;- beerbrew[complete.cases(beerbrew), ]
 
 # Calculate median values for each obs of ABV and IBU by state using DoBy
 

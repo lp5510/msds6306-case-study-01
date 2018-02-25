@@ -1,4 +1,6 @@
 # R Script to produce the tidy dataset
+
+# Clear or workspace of initial Objects
 rm(list=ls())
 
 # Load the needed libraries
@@ -6,10 +8,11 @@ library(knitr)
 library(dplyr)
 library(stringr)
 
-# Run the code for each question
+# Run all of the steps to produce the tidy dataset
 source('code/00_LoadAndPrepare.R')
 source('code/01_Question_01.tidy.R')
 source('code/02_Question_02.tidy.R')
+source('code/03_Question_03.tidy.R')
 
 # The above code produces the follwoing dataframes:
 #    beer
@@ -17,9 +20,13 @@ source('code/02_Question_02.tidy.R')
 #    brewery
 #    BreweryByState
 
+#
+# Save the tiody datasets to CSV Files
+#
 maindir <- "data"
 subdir <- "tidy"
 
+# Make sure the 'tidy' dataset directory exists
 ifelse(!dir.exists(file.path(maindir, subdir)), dir.create(file.path(maindir, subdir)), FALSE)
 
 directory <- paste(maindir, subdir, sep="/")
