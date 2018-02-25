@@ -6,17 +6,7 @@
 #                 6 observations
 # QC
 
-str(beer)
-summary(beer)
-str(brewery)
-summary(brewery)
-
-# Merge data frames
-beerbrew <- dplyr::inner_join(beer, brewery, by = "Brew_ID")
-summary(beerbrew)
-
-# Sort columns (one option)
-beerbrew <- beerbrew[c("Beer_ID", "Beer", "Style", "Ounces", "ABV", "IBU", "Brew_ID", "Brewery", "City", "State")]
+source('code/02_Question_02.tidy.R')
 
 summary(beerbrew)
 str(beerbrew)

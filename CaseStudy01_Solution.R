@@ -7,6 +7,7 @@ library(knitr)
 library(dplyr)
 library(ggplot2)
 library(doBy)
+library(stringr)
 
 
 # Run the code for each question

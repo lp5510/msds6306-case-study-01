@@ -5,18 +5,11 @@
 # Case Study 01 : Question 01) Breweries per state?
 # Requires the library: 'ggplot2'
 
-# Count breweries per state
-BreweryByState <- count(brewery, State)
-
-# Remove Washington DC
-BreweryByState <- BreweryByState[- grep("DC", BreweryByState$State), ]
-
-# in beer df rename column "Brewery_id"" to "Brew_ID" 
-BreweryByState <- rename(BreweryByState, Breweries = n)
+# The source path MUST include the "code" directory because the context
+#   when the source statement executes is within the RMarkdown file and that
+# is one directory 'up' from here
+source('code/01_Question_01.tidy.R')
 
 summary(BreweryByState)
-
-# Sort by most to least
-BreweryByState <- arrange(BreweryByState, desc(Breweries))
 
 ggplot(BreweryByState, aes(x=reorder(State, Breweries), y=(Breweries), fill = "red")) + geom_bar(stat='identity') + coord_flip() + labs(title ="Breweries Per State", x = "State", y = "Number of Breweries") + theme(legend.position="none")
