@@ -9,7 +9,7 @@
 BreweryByState <- count(brewery, State)
 
 # Remove Washington DC
-BreweryByState <- BreweryByState[-c(48), ]
+BreweryByState <- BreweryByState[-c(8), ]
 
 # in beer df rename column "Brewery_id"" to "Brew_ID" 
 BreweryByState <- rename(BreweryByState, Breweries = n)
