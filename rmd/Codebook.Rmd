@@ -146,10 +146,10 @@
             + State
                 + 2 Characters - 50 Unique Values
                 + No NA's
-     + Combined Beer and Brewery Names and Metrics
+     + Breweries by State
           + Info
-             + Dataframe: beerbrew
-             + CSV name: data/tidy/beerbrew.csv 
+             + Dataframe: breweryByState
+             + CSV name: data/tidy/BreweryByState.csv 
           + Variable names    
             + State
                 + 2 Characters - 50 Unique Values
