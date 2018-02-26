@@ -3,34 +3,115 @@
     + [Beer Names and Metrics](https://raw.githubusercontent.com/allthebits/msds6306-case-study-01/master/data/Beers.csv)
         + Variable names
             + Beer
+                + The name of the beer
                 + String
+                + Contains non UTF-8 characters
                 + No NA's
             + Beer_ID 
+                + Unique Identifier of the beer
                 + Integer - Range: (1 - 2692)
                 + No NA's
             + ABV
+                + Alcohol by volume of the beer
                 + Real Number - Range (0.001 - 0.128)
                 + Contains NA's
             + IBU
+                + International Bitterness Units of the beer
                 + Integer - Range (4 - 138)
                 + Contains NA's
             + Brew_ID
+                + Brewery ID associated with the beer
                 + Integer - Range (1 - 558)
                 + No NA's
             + Style
+                + Style of the beer
                 + String
+                + Contains non UTF-8 characters
                 + No NA's
             + Ounces
+                + Ounces of the beer
                 + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
                 + Contains NA's
     + [Breweries By State](https://raw.githubusercontent.com/allthebits/msds6306-case-study-01/master/data/Breweries.csv)
         + Variable names
-            + Brew_ID : Integer (1 - 558), No NA's
-            + Brewery : String, No NA's
-            + City : String, No NA's
-            + State : 2 Characters, No NA's, 51 Unique Values
+            + Brew_ID
+                + Unique identifier of the brewery
+                + Integer (1 - 558)
+                + No NA's
+            + Brewery
+                + Name of the brewery
+                + String
+                + Contains non UTF-8 characters
+                + No NA's
+            + City
+                + City where the brewery is located
+                + String
+                + No NA's
+            + State
+                + US state where the brewery is located
+                + 2 Characters
+                + No NA's
+                + 51 Unique Values
 2. Final Merged Data
-    + [Beer and Brewery Names and Metrics]
+    + Beer Names and Metrics
+        + Info
+            + Dataframe: beer
+            + CSV name: data/tidy/beer.csv
+        + Variable names
+            + Beer
+                + The name of the beer
+                + String
+                + UTF-8 characters only
+                + No NA's
+            + Beer_ID 
+                + Unique Identifier of the beer
+                + Integer - Range: (1 - 2692)
+                + No NA's
+            + ABV
+                + Alcohol by volume of the beer
+                + Real Number - Range (0.001 - 0.128)
+                + Contains NA's
+            + IBU
+                + International Bitterness Units of the beer
+                + Integer - Range (4 - 138)
+                + Contains NA's
+            + Brew_ID
+                + Brewery ID associated with the beer
+                + Integer - Range (1 - 558)
+                + No NA's
+            + Style
+                + Style of the beer
+                + String
+                + UTF-8 characters only
+                + No NA's
+            + Ounces
+                + Ounces of the beer
+                + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
+                + No NA's
+    + Breweries By State
+        + Variable names
+            + Brew_ID
+                + Unique identifier of the brewery
+                + Integer (1 - 558)
+                + No NA's
+            + Brewery
+                + Name of the brewery
+                + String
+                + UTF-8 characters only
+                + No NA's
+            + City
+                + City where the brewery is located
+                + String
+                + No NA's
+            + State
+                + US state where the brewery is located
+                + 2 Characters
+                + No NA's
+                + 51 Unique Values
+    + Beer and Brewery Names and Metrics
+        + Info
+            + Dataframe: beerbrew
+            + CSV name: data/tidy/beerbrew.csv
         + Variable names
             + Beer_ID
                 + Integer - Range: (1 - 2692)
@@ -66,6 +147,8 @@
     +
     +
 4. Tidy dataset
-    +
-    +
+    + beer
+    + beerbrew
+    + brewery
+    + BreweryByState
 5. Recipe for Tidy Dataset
