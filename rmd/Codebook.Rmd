@@ -89,6 +89,9 @@
                 + Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)
                 + No NA's
     + Breweries By State
+        + Info
+            + Dataframe: brewery
+            + CSV name: data/tidy/brewery.csv
         + Variable names
             + Brew_ID
                 + Unique identifier of the brewery
@@ -108,7 +111,7 @@
                 + 2 Characters
                 + No NA's
                 + 51 Unique Values
-    + Beer and Brewery Names and Metrics
+    + Combined Beer and Brewery Names and Metrics
         + Info
             + Dataframe: beerbrew
             + CSV name: data/tidy/beerbrew.csv
@@ -142,7 +145,18 @@
                 + No NA's
             + State
                 + 2 Characters - 50 Unique Values
-                + No NA's 
+                + No NA's
+     + Combined Beer and Brewery Names and Metrics
+          + Info
+             + Dataframe: beerbrew
+             + CSV name: data/tidy/beerbrew.csv 
+          + Variable names    
+            + State
+                + 2 Characters - 50 Unique Values
+                + No NA's
+            + Breweries
+                + Integer - Range (1 - 47)
+                + No NA's          
 3. Data Modifications
     +
     +
