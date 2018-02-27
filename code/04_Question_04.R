@@ -27,5 +27,6 @@ ABV_IBU_median_long <- melt(ABV_IBU_median_norm)
                                        
 # Plot dual barplots with ggplot2
 ggplot(ABV_IBU_median_long,aes(x = reorder(State,value), y = value,fill=variable)) + 
-geom_bar(stat="identity",position="dodge") + labs(title = "Median Alcohol By Volume vs. Median International Bitterness Unit by State") + labs(x = "State") + labs(y = "Normalized Values") 
+geom_bar(stat="identity",position="dodge") + labs(title = "Median Alcohol By Volume vs. Median International Bitterness Unit by State")
+                                           + labs(x = "State") + labs(y = "Normalized Values") 
 
