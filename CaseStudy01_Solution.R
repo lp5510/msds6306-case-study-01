@@ -8,6 +8,7 @@ library(dplyr)
 library(ggplot2)
 library(doBy)
 library(stringr)
+library(reshape2)
 
 
 # Run the code for each question
