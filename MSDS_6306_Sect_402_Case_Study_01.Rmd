@@ -37,6 +37,7 @@ library(knitr)
 1. ggplot2 - To Install: `1install.packages("ggplot2")`
 1. doBy    - To Install: `1install.packages("doBy")`
 1. stringr - To Install: `1install.packages("stringr")`
+1. reshape2 - To Install: `1install.packages("reshape2")`
 
 #### Case Study Solution
 
