@@ -45,6 +45,7 @@ library(dplyr)
 library(ggplot2)
 library(doBy)
 library(stringr)
+library(reshape2)
 ```
 
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
