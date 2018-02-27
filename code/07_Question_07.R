@@ -8,5 +8,5 @@
 
 ggplot(beerbrew, aes(x=IBU, y=ABV)) +
     geom_point(shape=1) +    # Use hollow circles
-    geom_smooth(method=lm)   # Add linear regression line 
-                             #  (by default includes 95% confidence region)
+    geom_smooth(method=lm) +  # Add linear regression line (by default includes 95% confidence region)
+    labs(title = "Alcohol by Volume (ABV) vs. International Bitterness Unit (IBU)") + labs(x = "International Bitterness Unit (IBU)") + labs(y = "Alcohol by Volume (ABV)")                         
