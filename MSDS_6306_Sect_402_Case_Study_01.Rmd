@@ -16,6 +16,13 @@ output:
 ```{r setup, include=FALSE, echo=TRUE}
 # Clean the workspace, remove all existing Objects
 rm(list=ls())
+
+# Clean up the files that are generated
+file <- "tmp/q1_plot.png"
+if (file.exists(file)) file.remove(file)
+
+file <- "tmp/q2_text.txt"
+if (file.exists(file)) file.remove(file)
 ```
 
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}

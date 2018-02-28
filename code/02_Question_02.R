@@ -15,3 +15,7 @@ str(beerbrew)
 
 head(beerbrew,6)
 tail(beerbrew,6)
+
+out1 <- capture.output(head(beerbrew,6))
+out2 <- capture.output(tail(beerbrew,6))
+text = paste(out1, "\n", out2)
