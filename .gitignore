@@ -34,3 +34,6 @@ vignettes/*.pdf
 
 # Tidy dataset files
 data/tidy
+
+# Temp Directory
+tmp/

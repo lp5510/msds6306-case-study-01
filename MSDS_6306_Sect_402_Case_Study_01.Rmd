@@ -20,23 +20,6 @@ rm(list=ls())
 
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
 library(knitr)
-
-# Import the libraries here, but echo them out later for transparency
-library(dplyr)
-library(ggplot2)
-library(doBy)
-library(stringr)
-#
-# This imports the R scripts, but does not execute them yet.
-# They are executed later on.
-read_chunk('code/00_LoadAndPrepare.R')
-read_chunk('code/01_Question_01.R')
-read_chunk('code/02_Question_02.R')
-read_chunk('code/03_Question_03.R')
-read_chunk('code/04_Question_04.R')
-read_chunk('code/05_Question_05.R')
-read_chunk('code/06_Question_06.R')
-read_chunk('code/07_Question_07.R')
 ```
 
 <!-- Include the Codebook Rmd file -->
@@ -58,21 +41,37 @@ read_chunk('code/07_Question_07.R')
 1. ggplot2 - To Install: `1install.packages("ggplot2")`
 1. doBy    - To Install: `1install.packages("doBy")`
 1. stringr - To Install: `1install.packages("stringr")`
-```
+1. reshape2 - To Install: `1install.packages("reshape2")`
+
+```{r, results='hide', message=FALSE, warning=FALSE}
 library(dplyr)
 library(ggplot2)
 library(doBy)
 library(stringr)
+library(reshape2)
 ```
 
 #### Case Study Solution
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
+#
+# This imports the R scripts, but does not execute them yet.
+# They are executed later in the next code chunk
+read_chunk('code/00_LoadAndPrepare.R')
+read_chunk('code/01_Question_01.R')
+read_chunk('code/02_Question_02.R')
+read_chunk('code/03_Question_03.R')
+read_chunk('code/04_Question_04.R')
+read_chunk('code/05_Question_05.R')
+read_chunk('code/06_Question_06.R')
+read_chunk('code/07_Question_07.R')
+
 #
 # In RStudio the next block of code may look like it has a compile or syntax
 #    error in the editor.  However, if you run 'Knit', the document will build
 #    without error.  It will give you and error:  "Unexpected token '<'"
 #
 ```
+
 
 ```{r}
 <<LoadAndPrepare>>
