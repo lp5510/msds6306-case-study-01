@@ -1,5 +1,6 @@
 ## Answers to Project Questions
 1. *How many breweries are present in each state?*
+    - ![Breweries by State](tmp/q1_plot.png "Breweries by State")
 1. *After merging the Beer and Breweries datasets, what are the first and last 6 observations in the datasets?*
 1. *How many **NA** values are contained in each column?*
 1. *What is the median alcohol content and international bitterness unit for each state?  This also includes a bar chart of this data.*

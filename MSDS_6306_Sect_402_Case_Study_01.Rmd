@@ -44,6 +44,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=8)
 1. doBy    - To Install: `1install.packages("doBy")`
 1. stringr - To Install: `1install.packages("stringr")`
 1. reshape2 - To Install: `1install.packages("reshape2")`
+1. gridExtra - To Install: `1install.packages("gridExtra")`
 
 #### Case Study Solution
 
@@ -53,6 +54,7 @@ library(ggplot2)
 library(doBy)
 library(stringr)
 library(reshape2)
+library(gridExtra)
 ```
 
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}

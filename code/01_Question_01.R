@@ -15,3 +15,4 @@ summary(BreweryByState)
 q1_plot <- ggplot(BreweryByState, aes(x=reorder(State, Breweries), y=(Breweries), fill = "red")) + geom_bar(stat='identity') + coord_flip() + labs(title ="Breweries Per State", x = "State", y = "Number of Breweries") + theme(legend.position="none")
 
 grid::grid.draw(q1_plot)
+ggsave(q1_plot, filename="tmp/q1_plot.png")
