@@ -135,6 +135,7 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#codebook">Codebook</a></li>
+<li><a href="#introduction">Introduction</a></li>
 <li><a href="#answers-to-project-questions">Answers to Project Questions</a></li>
 <li><a href="#appendix">Appendix</a></li>
 </ul>
@@ -152,36 +153,45 @@ $(document).ready(function () {
 <ul>
 <li>Beer
 <ul>
+<li>The name of the beer</li>
 <li>String</li>
+<li>Contains non UTF-8 characters</li>
 <li>No NA’s</li>
 </ul></li>
 <li>Beer_ID
 <ul>
+<li>Unique Identifier of the beer</li>
 <li>Integer - Range: (1 - 2692)</li>
 <li>No NA’s</li>
 </ul></li>
 <li>ABV
 <ul>
+<li>Alcohol by volume of the beer</li>
 <li>Real Number - Range (0.001 - 0.128)</li>
 <li>Contains NA’s</li>
 </ul></li>
 <li>IBU
 <ul>
+<li>International Bitterness Units of the beer</li>
 <li>Integer - Range (4 - 138)</li>
 <li>Contains NA’s</li>
 </ul></li>
 <li>Brew_ID
 <ul>
+<li>Brewery ID associated with the beer</li>
 <li>Integer - Range (1 - 558)</li>
 <li>No NA’s</li>
 </ul></li>
 <li>Style
 <ul>
+<li>Style of the beer</li>
 <li>String</li>
+<li>Contains non UTF-8 characters</li>
 <li>No NA’s</li>
 </ul></li>
 <li>Ounces
 <ul>
+<li>Ounces of the beer</li>
 <li>Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)</li>
 <li>Contains NA’s</li>
 </ul></li>
@@ -191,17 +201,131 @@ $(document).ready(function () {
 <ul>
 <li>Variable names
 <ul>
-<li>Brew_ID : Integer (1 - 558), No NA’s</li>
-<li>Brewery : String, No NA’s</li>
-<li>City : String, No NA’s</li>
-<li>State : 2 Characters, No NA’s, 51 Unique Values</li>
+<li>Brew_ID
+<ul>
+<li>Unique identifier of the brewery</li>
+<li>Integer (1 - 558)</li>
+<li>No NA’s</li>
+</ul></li>
+<li>Brewery
+<ul>
+<li>Name of the brewery</li>
+<li>String</li>
+<li>Contains non UTF-8 characters</li>
+<li>No NA’s</li>
+</ul></li>
+<li>City
+<ul>
+<li>City where the brewery is located</li>
+<li>String</li>
+<li>No NA’s</li>
+</ul></li>
+<li>State
+<ul>
+<li>US state where the brewery is located</li>
+<li>2 Characters</li>
+<li>No NA’s</li>
+<li>51 Unique Values</li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
 <li>Final Merged Data
 <ul>
-<li>[Beer and Brewery Names and Metrics]
+<li>Beer Names and Metrics
 <ul>
+<li>Info
+<ul>
+<li>Dataframe: beer</li>
+<li>CSV name: data/tidy/beer.csv</li>
+</ul></li>
+<li>Variable names
+<ul>
+<li>Beer
+<ul>
+<li>The name of the beer</li>
+<li>String</li>
+<li>UTF-8 characters only</li>
+<li>No NA’s</li>
+</ul></li>
+<li>Beer_ID
+<ul>
+<li>Unique Identifier of the beer</li>
+<li>Integer - Range: (1 - 2692)</li>
+<li>No NA’s</li>
+</ul></li>
+<li>ABV
+<ul>
+<li>Alcohol by volume of the beer</li>
+<li>Real Number - Range (0.001 - 0.128)</li>
+<li>Contains NA’s</li>
+</ul></li>
+<li>IBU
+<ul>
+<li>International Bitterness Units of the beer</li>
+<li>Integer - Range (4 - 138)</li>
+<li>Contains NA’s</li>
+</ul></li>
+<li>Brew_ID
+<ul>
+<li>Brewery ID associated with the beer</li>
+<li>Integer - Range (1 - 558)</li>
+<li>No NA’s</li>
+</ul></li>
+<li>Style
+<ul>
+<li>Style of the beer</li>
+<li>String</li>
+<li>UTF-8 characters only</li>
+<li>No NA’s</li>
+</ul></li>
+<li>Ounces
+<ul>
+<li>Ounces of the beer</li>
+<li>Real Number - Values: (8.4, 12.0, 16.0, 16.9, 19.2, 24.0, 32.0)</li>
+<li>No NA’s</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Breweries By State
+<ul>
+<li>Variable names
+<ul>
+<li>Brew_ID
+<ul>
+<li>Unique identifier of the brewery</li>
+<li>Integer (1 - 558)</li>
+<li>No NA’s</li>
+</ul></li>
+<li>Brewery
+<ul>
+<li>Name of the brewery</li>
+<li>String</li>
+<li>UTF-8 characters only</li>
+<li>No NA’s</li>
+</ul></li>
+<li>City
+<ul>
+<li>City where the brewery is located</li>
+<li>String</li>
+<li>No NA’s</li>
+</ul></li>
+<li>State
+<ul>
+<li>US state where the brewery is located</li>
+<li>2 Characters</li>
+<li>No NA’s</li>
+<li>51 Unique Values</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Beer and Brewery Names and Metrics
+<ul>
+<li>Info
+<ul>
+<li>Dataframe: beerbrew</li>
+<li>CSV name: data/tidy/beerbrew.csv</li>
+</ul></li>
 <li>Variable names
 <ul>
 <li>Beer_ID
@@ -265,15 +389,36 @@ $(document).ready(function () {
 </ul></li>
 <li>Tidy dataset
 <ul>
-<li></li>
+<li>beer</li>
+<li>beerbrew</li>
+<li>brewery</li>
+<li>BreweryByState</li>
+</ul></li>
+<li>Recipe for Tidy Dataset
+<ul>
 <li></li>
 </ul></li>
-<li>Recipe for Tidy Dataset</li>
 </ol>
+<!-- Include the Introduction Rmd file -->
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>This project analyzes several aspects of Beer and Brewery data from several breweries in the United States. The bulk of the analyses center around bitterness and alcohol content, with the ultimate goal of trying to identify a causal relationship between the two.</p>
+<p>Before we can do this our data must be merged and cleaned. This process results in a “tidy” dataset, the steps of which are outline above. In short, this involves renaming some of the data fields, as well as fixing many data deficiencies that would otherwise cause problems with the analysis. Additionally, we ensure that the analysis is limited to breweries in the United States only. The District of Columbia is not included.</p>
+<p>In all, the analysis answers 7 main questions, which are addressed below in this report.</p>
 <!-- Include the Answers Rmd file -->
 </div>
 <div id="answers-to-project-questions" class="section level2">
 <h2>Answers to Project Questions</h2>
+<ol style="list-style-type: decimal">
+<li><em>How many breweries are present in each state?</em></li>
+<li><em>After merging the Beer and Breweries datasets, what are the first and last 6 observations in the datasets?</em></li>
+<li><em>How many <strong>NA</strong> values are contained in each column?</em></li>
+<li><em>What is the median alcohol content and international bitterness unit for each state? This also includes a bar chart of this data.</em></li>
+<li><em>Which state has the maximum alcoholic <strong>ABV</strong> beer? Which state has the most bitter <strong>IBU</strong> beer?</em></li>
+<li><em>What are the summary statistics for the <strong>ABV</strong> variable?</em></li>
+<li><em>Is there an apparent relationship between bitterness of the beer and its alcoholic content? What does a scatter plot of this data look like?</em></li>
+</ol>
 </div>
 <div id="appendix" class="section level2">
 <h2>Appendix</h2>

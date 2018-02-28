@@ -26,6 +26,10 @@ library(knitr)
 ```{r child = 'rmd/Codebook.rmd'}
 ```
 
+<!-- Include the Introduction Rmd file -->
+```{r child = 'rmd/Introduction.rmd'}
+```
+
 <!-- Include the Answers Rmd file -->
 ```{r child = 'rmd/Answers.rmd'}
 ```

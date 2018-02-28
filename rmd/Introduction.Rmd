@@ -1,0 +1,7 @@
+## Introduction
+
+This project analyzes several aspects of Beer and Brewery data from several breweries in the United States.  The bulk of the analyses center around bitterness and alcohol content, with the ultimate goal of trying to identify a causal relationship between the two.
+
+Before we can do this our data must be merged and cleaned.  This process results in a "tidy" dataset, the steps of which are outline above.  In short, this involves renaming some of the data fields, as well as fixing many data deficiencies that would otherwise cause problems with the analysis.  Additionally, we ensure that the analysis is limited to breweries in the United States only.  The District of Columbia is not included.
+
+In all, the analysis answers 7 main questions, which are addressed below in this report.
