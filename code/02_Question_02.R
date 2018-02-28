@@ -13,9 +13,8 @@ str(beerbrew)
 
 # Check beerbrew
 
-head(beerbrew,6)
-tail(beerbrew,6)
+q2_out1 <- capture.output(head(beerbrew,6))
+q2_out2 <- capture.output(tail(beerbrew,6))
 
-out1 <- capture.output(head(beerbrew,6))
-out2 <- capture.output(tail(beerbrew,6))
-text = paste(out1, "\n", out2)
+text <- paste0(q2_out1, q2_out2)
+textplot(text, valign="top")
