@@ -4,6 +4,8 @@
 1. *After merging the Beer and Breweries datasets, what are the first and last 6 observations in the datasets?*
 1. *How many **NA** values are contained in each column?*
 1. *What is the median alcohol content and international bitterness unit for each state?  This also includes a bar chart of this data.*
+    - ![ABV/IBU by State](tmp/q4_plot.png "ABV/IBU by State")
 1. *Which state has the maximum alcoholic **ABV** beer?  Which state has the most bitter **IBU** beer?*
 1. *What are the summary statistics for the **ABV** variable?*
 1. *Is there an apparent relationship between bitterness of the beer and its alcoholic content?  What does a scatter plot of this data look like?*
+    - ![IBU vs. ABV](tmp/q7_plot.png "IBU vs. ABV")

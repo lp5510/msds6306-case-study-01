@@ -16,13 +16,6 @@ output:
 ```{r setup, include=FALSE, echo=TRUE}
 # Clean the workspace, remove all existing Objects
 rm(list=ls())
-
-# Clean up the files that are generated
-file <- "tmp/q1_plot.png"
-if (file.exists(file)) file.remove(file)
-
-file <- "tmp/q2_text.txt"
-if (file.exists(file)) file.remove(file)
 ```
 
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
@@ -49,16 +42,21 @@ TODO: Add conclusion here
 ## Appendix
 ### Source Code
 #### Required Libraries
-1.    deplyr - To Install: `1install.packages("deplyr")`
-1.   ggplot2 - To Install: `1install.packages("ggplot2")`
-1.      doBy - To Install: `1install.packages("doBy")`
-1.   stringr - To Install: `1install.packages("stringr")`
-1.  reshape2 - To Install: `1install.packages("reshape2")`
-1. gridExtra - To Install: `1install.packages("gridExtra")`
+1. deplyr    - To Install: `install.packages("deplyr")`
+1. ggplot2   - To Install: `install.packages("ggplot2")`
+1. doBy      - To Install: `install.packages("doBy")`
+1. stringr   - To Install: `install.packages("stringr")`
+1. reshape2  - To Install: `install.packages("reshape2")`
+1. gridExtra - To Install: `install.packages("gridExtra")`
 
 #### Case Study Solution
 
 ```{r, results='hide', message=FALSE, warning=FALSE}
+#
+# NOTE:
+# If you add any libraries to this file, make sure you add the library to the
+# 'ENVIRONMENT' section of the file: code/00_LoadAndPrepare.R
+#
 library(dplyr)
 library(ggplot2)
 library(doBy)
