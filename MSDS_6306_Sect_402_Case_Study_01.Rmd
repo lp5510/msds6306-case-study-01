@@ -20,6 +20,8 @@ rm(list=ls())
 
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
 library(knitr)
+# Set RMarkdown plots to a default 12 by 8 inches
+knitr::opts_chunk$set(fig.width=12, fig.height=8)
 ```
 
 <!-- Include the Codebook Rmd file -->
@@ -43,6 +45,8 @@ library(knitr)
 1. stringr - To Install: `1install.packages("stringr")`
 1. reshape2 - To Install: `1install.packages("reshape2")`
 
+#### Case Study Solution
+
 ```{r, results='hide', message=FALSE, warning=FALSE}
 library(dplyr)
 library(ggplot2)
@@ -51,7 +55,6 @@ library(stringr)
 library(reshape2)
 ```
 
-#### Case Study Solution
 ```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
 #
 # This imports the R scripts, but does not execute them yet.

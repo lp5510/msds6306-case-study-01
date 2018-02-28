@@ -16,4 +16,16 @@ ABV_IBU_median <- dplyr::inner_join(MedianABV, MedianIBU, by = "State")
 summary(ABV_IBU_median)
 str(ABV_IBU_median)
 
-# TODO: normalize and dual barplot ggplot here *********************************
+# Normalize ABV and IBU values for direct comparison
+ABV_IBU_median_norm <- as.data.frame(apply(ABV_IBU_median[, 2:3], 2, function(x) (x - min(x))/(max(x)-min(x))))
+
+# Add back State column
+ABV_IBU_median_norm <- cbind(State = ABV_IBU_median$State, ABV_IBU_median_norm)
+                                           
+# Melt data frame (ABV and IBU in one column) for ggplot
+ABV_IBU_median_long <- melt(ABV_IBU_median_norm)
+                                       
+# Plot dual barplots with ggplot2
+ggplot(ABV_IBU_median_long,aes(x = reorder(State,value), y = value,fill=variable)) + geom_bar(stat="identity",position="dodge") + labs(title = "Median Alcohol By Volume vs. Median International Bitterness Unit by State") + labs(x = "State") + labs(y = "Normalized Values") 
+                                           
+
