@@ -18,3 +18,7 @@ q2_out2 <- capture.output(tail(beerbrew,6))
 
 text <- paste0(q2_out1, q2_out2)
 textplot(text, valign="top")
+
+png(file="tmp/q2_plot.png")
+textplot(text, valign="top")
+dev.off();
