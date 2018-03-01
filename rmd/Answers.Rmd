@@ -31,7 +31,7 @@ The bitterest beer (with an IBU value of 138) is “Bitter Bitch Imperial IPA Am
 ```
     The summary statistics for the ABV (Alcohol By Volume) variable are listed below:
     Min.     1st Qu.  Median   Mean     3rd Qu.  Max. 
-    0.02700  0.05000  0.05700  0.06007  0.06800  0.12500
+    0.00100 0.05000 0.05600 0.05987 0.06800 0.12800
 ```
 
 
