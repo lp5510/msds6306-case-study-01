@@ -28,7 +28,10 @@ MSDS 6306 Jan-Apr 2018 - Case Study 01
                 - TODO: define what this is, move it to archive, or delete it.
             - CaseStudy1.pdf
                 - TODO: define what this is, move it to archive, or delete it.
+        - archive/
+            - Exactly what is says.
         - code/
+            - Re-usable chunks of code used in both the main project Rmd file, the Solution.R file and Tidy_Recipe.R.
             - 00_Setup.R
                 - This sets the R environment up for the all of the analyses to be run.
             - 00_LoadAndPrepare.R
@@ -54,14 +57,17 @@ MSDS 6306 Jan-Apr 2018 - Case Study 01
             - 07_Question_07.R
                 - Performs the operations to answer the seventh question.
         - rmd/
+            - Files in this directory are included into the main file when the document is knitted together.  They are here mainly for organizational purposes.
             - Answers.Rmd
+                - Human readable, textual answers in prose form.  These are the formal answers the the posed questions.
             - Codebook.Rmd
+                - The codebook, defining the uncleaned data, as well as the tidy data.
             - Introduction.Rmd
+                - Project introduction.
         - data/
             - Breweries.csv
             - Beers.csv
 
 ## Directories not managed by Git
-    - archive/    :  Exactly what is says.
-    - data/tidy/  :  This is where the tidy dataset are stored.  This is transient storage.
+    - data/tidy/  :  This is where the tidy dataset are stored when they are created by running the Analysis.  This is transient storage.
     - tmp/        :  Transient storage for graphics and other intermediary files.
