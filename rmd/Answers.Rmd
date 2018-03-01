@@ -1,12 +1,40 @@
 ## Answers to Data Analysis Questions
 1. *How many breweries are present in each state?*
     - ![Breweries by State](tmp/q1_plot.png "Breweries by State")
-1. *After merging the Beer and Breweries datasets, what are the first and last 6 observations in the datasets?*
+
+
+2. *After merging the Beer and Breweries datasets, what are the first and last 6 observations in the datasets?*
     - ![First and Last 6 Observations](tmp/q2_plot.png "First and Last 6 Observations")
-1. *How many **NA** values are contained in each column?*
-1. *What is the median alcohol content and international bitterness unit for each state?  This also includes a bar chart of this data.*
+
+
+3. *How many **NA** values are contained in each column?*
+
+```
+There were 62 NA’s in the ABV (Alcohol By Volume) column and 998 NA’s in the IBU (International Bitterness Unit) column (see below). To ensure consistency, these rows were omitted in the ABV vs IBU analysis performed later in the study.
+
+Beer_ID    Beer   Style  Ounces     ABV     IBU Brew_ID Brewery    City   State
+   0       0       0       0      62     998       0       0       0       0
+```
+
+
+4. *What is the median alcohol content and international bitterness unit for each state?  This also includes a bar chart of this data.*
     - ![ABV/IBU by State](tmp/q4_plot.png "ABV/IBU by State")
-1. *Which state has the maximum alcoholic **ABV** beer?  Which state has the most bitter **IBU** beer?*
-1. *What are the summary statistics for the **ABV** variable?*
-1. *Is there an apparent relationship between bitterness of the beer and its alcoholic content?  What does a scatter plot of this data look like?*
+
+    
+5. *Which state has the maximum alcoholic **ABV** beer?  Which state has the most bitter **IBU** beer?*
+    - The beer with the highest alcoholic content (with an ABV value of 0.125 or 12.5%) is “London Balling English Barleywine”, brewed by Against the Grain Brewery in Louisville, KY.
+The bitterest beer (with an IBU value of 138) is “Bitter Bitch Imperial IPA American Double”, brewed by the Astoria Brewing Company in Astoria, OR.
+
+
+6. *What are the summary statistics for the **ABV** variable?*
+
+```
+    The summary statistics for the ABV (Alcohol By Volume) variable are listed below:
+    Min.     1st Qu.  Median   Mean     3rd Qu.  Max. 
+    0.02700  0.05000  0.05700  0.06007  0.06800  0.12500
+```
+
+
+7. *Is there an apparent relationship between bitterness of the beer and its alcoholic content?  What does a scatter plot of this data look like?*
+    - "Alcohol by Volume (ABV) vs. International Bitterness Unit (IBU)" scatter plot.   The scatter plot above was derived by plotting median values of ABV (Alcohol By Volume) against median values of IBU (International Bitterness Units). The linear regression line includes a shaded 95% confidence interval. There is good evidence for a positive correlation between ABV and IBU values in this data set.
     - ![IBU vs. ABV](tmp/q7_plot.png "IBU vs. ABV")
