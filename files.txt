@@ -1,0 +1,36 @@
+Project Directories, Documentation, Source Code, Data
+    - <Project Root>/
+        - MSDS_6306_Sect_402_Case_Study_01.Rmd
+        - MSDS_6306_Sect_402_Case_Study_01.html
+        - README.md
+        - Solution.R
+        - Writeup_CaseStudy1_LEP_v1.txt
+        - Tidy_Recipe.R
+        - Case_Study_code_file_v1
+        - resources.txt
+        - CaseStudy1.pdf
+    - code/
+        - 00_Setup.R
+        - 00_LoadAndPrepare.R
+        - 01_Question_01.R
+        - 01_Question_01.tidy.R
+        - 02_Question_02.R
+        - 02_Question_02.tidy.R
+        - 03_Question_03.R
+        - 03_Question_03.tidy.R
+        - 04_Question_04.R
+        - 05_Question_05.R
+        - 06_Question_06.R
+        - 07_Question_07.R
+    - rmd/
+        - Answers.Rmd
+        - Codebook.Rmd
+        - Introduction.Rmd
+    - data/
+        - Breweries.csv
+        - Beers.csv
+
+
+### Directories not managed by Git
+    - data/tidy/  :  This is where the tidy dataset are stored.  This is transient storage.
+    - tmp/        :  Transient storage for graphics and other intermediary files.

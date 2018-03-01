@@ -8,10 +8,10 @@ author:
 - MJKelleher <mikek@smu.edu>
 date: "February 14, 2018"
 output: 
-  pdf_document:
+  html_document:
     toc: true
     toc_depth: 2
-  html_document:
+  pdf_document:
     toc: true
     toc_depth: 2
 ---
@@ -37,7 +37,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=8)
 ```
 
 <!-- Include the Answers Rmd file -->
-```{r child = 'rmd/Answers.rmd', ref.label=c("q2obj")}
+```{r child = 'rmd/Answers.rmd'}
 ```
 
 ## Conclusion
@@ -91,7 +91,7 @@ read_chunk('code/07_Question_07.R')
 ```
 
 
-```{r qobjects}
+```{r}
 <<LoadAndPrepare>>
 <<Question_01>>
 <<Question_02>>
