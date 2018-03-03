@@ -1,0 +1,57 @@
+## Beer and Brewery Data Analysis
+
+
+1. First, we examined how many breweries there were in each state so we could get a sense of the relative geographical popularity of craft brewed beers:
+
+  - ![Breweries by State](tmp/q1_plot.png "Breweries by State")
+    
+In this dataset, craft beer breweries are most numerous in Colorado, California and Michigan, while relatively rare in several states such as West Virginia, South Dakota and North Dakota. More information is needed to ascertain whether this is primarily a function of demographics (an easy answer since craft beer consumers tend to skew younger and urban) or there may be more subtle factors involved.
+
+   
+2. After cleaning the data, we used the Brew_ID as a key variable to perform the merge operation. As a quality control measure, here is a listing of the first and last 6 observations in the merged dataset.
+
+
+First 6 Observations:
+
+  - ![First 6 Observations](tmp/firstsixobs.png)
+    
+Last 6 Observations:
+
+  - ![Last 6 Observations](tmp/lastsixobs.png)
+
+    
+3. Further screening of the merged dataset revealed a significant number of missing ABV and IBU measurements.
+
+   - ![Listed NA's](tmp/Beerbrew_NA.png)
+    
+In a dataset with 2370 observations after removing duplicate values, the missing ABV values represent 2.6% of the observations, while the missing IBU values represent 42% of the sample data provided. For the purposes of our analysis these observations were omitted in the later part of the study. This lack of data, particularly the IBU values, could impact the reliability of the ABV/IBU comparison. Future measures should be taken to source this information if available.
+
+
+4.  We also looked at the ABV (Alcohol by Volume) and IBU (International Bitterness Units) by state (see below):
+
+   - ![ABV/IBU by State](tmp/q4_plot.png "ABV/IBU by State")
+    
+The bar plot above was derived by normalizing median values of ABV (Alcohol By Volume) and IBU (International Bitterness Units) to a range of 0 to 1 and plotting them in pairs, ordered by increasing values per state. There appears to be a positive correlation between median alcohol content by volume and the bitterness unit values observed in this dataset, although in some states there can be significant deviations from this trend.    
+
+    
+5. We also looked at the beers with the highest ABV and IBU values:
+
+The beer with the highest alcoholic content (with an ABV value of 0.128 or 12.8%) is "Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale", brewed by Upslope Brewing Company in Boulder, CO.
+
+The bitterest beer (with an IBU value of 138) is "Bitter Bitch Imperial IPA American Double", brewed by the Astoria Brewing Company in Astoria, OR.
+
+
+6. The summary statistics for the ABV (Alcohol by Volume) variable are listed below:
+
+  - ![ABV Summary Statistics](tmp/ABS_stats.png)
+    
+There is quite a variation between the 0.1% almost non-alcoholic brew and the 12.8% Belgian Ale, with the average ABV around 6%.    
+
+
+7. Finally, we plot the relationship between the bitterness of the beer and its alcoholic content.
+
+  - ![IBU vs. ABV](tmp/q7_plot.png "IBU vs. ABV")
+    
+The scatter plot above was derived by plotting median values of ABV (Alcohol By Volume) against median values of IBU (International Bitterness Units). The linear regression line includes a shaded 95% confidence interval. When looking at the scatterplot of ABV vs IBU, there looks to be a linear relationship between the two variables. A correlation analysis would be recommended to measure this relationship. When performing the linear correlation analysis, we have found a moderate positive linear correlation between ABV and IBU (p-value < 0.0001 95% confidence interval, 2-sided t-test). R-squared for the fit is 44.8%. So ABV can predict almost 45% of the IBU scores. This indicates there are other factors involved not accounted for in this analysis and might suggest further investigation.
+    
+  
