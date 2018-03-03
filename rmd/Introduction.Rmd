@@ -1,0 +1,10 @@
+
+####GitHub Repository: https://github.com/allthebits/msds6306-case-study-01
+
+## Introduction
+
+In order to assist NuBrew Inc. in determining the proper product niche for their line of distinctive craft brews, our initial study will focus upon the most general beer metrics of Alcohol by Volume (ABV) and International Bitterness Units (IBV) for product formulation purposes.  Ultimately, the market success of NuBrew's product will also depend on this as well as a variety of geographical, demographic and product data analysis which should also be considered when developing a new craft beer in this highly competitive market.
+
+This project is limited to the analysis of the major metrics of Beer and Brewery data from several breweries in the United States. The bulk of our work centers on the measurement of bitterness and alcohol content, with the ultimate goal of trying to identify a causal relationship between the two.
+
+Before we can do this our data must be merged and cleaned. This process results in a "tidy" dataset, the steps of which are outlined below this report. In short, this involves renaming some of the data fields, as well as fixing many data deficiencies that would otherwise cause problems with the analysis. Additionally, we ensure that the analysis is limited to breweries in the United States only. The District of Columbia is not included.
