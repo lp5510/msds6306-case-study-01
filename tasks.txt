@@ -1,4 +1,0 @@
-1) [Luke] Merging and cleaning data, most of the code
-2) [Lokesh] GGPlots and graphics, question #4, 
-3) [MJK] RMarkdown file and merge in code and text
-4) [Andrew] Variable names, metrics, range of values

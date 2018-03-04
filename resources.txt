@@ -1,0 +1,8 @@
+# Here is a place to put useful information - articles, links and so on to assist with the writeup
+
+This is a very short summary of ABV and IBU: https://www.monkeysfightingrobots.co/ibu-vs-abv-whole-lot-of-initials-whole-lot-of-knowledge/
+
+
+Textplot - save to file:  https://stackoverflow.com/questions/13829365/exporting-multiple-panels-of-plots-and-data-to-png-in-the-style-layout-work
+
+https://stackoverflow.com/questions/19918985/r-plot-only-text

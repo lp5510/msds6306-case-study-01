@@ -1,0 +1,3 @@
+## Conclusion
+
+From our analysis, it does appear that there is a weak positive correlation between the bitterness of a beer and its corresponding alcoholic content. These data also suggest the presence of additional factors which influence this relationship. Additional areas of investigation may include studying constituents (amount of hops and other ingredients and, brewing techniques (aging and post processing methods) which also may influence the character of the product.

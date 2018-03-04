@@ -1,0 +1,169 @@
+---
+title: "Beers and Breweries Analysis"
+author:
+- Luke Pierce <lepierce@smu.edu>
+- Lokesh Maganti <lmaganti@smu.edu>
+- Andrew Walch <awalch@smu.edu>
+- MJKelleher <mikek@smu.edu>
+date: "February 14, 2018"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+  word_document:
+    toc: yes
+    toc_depth: '2'
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+subtitle: Case Study 01 - MSDS 6306 Section 402
+---
+
+```{r setup, include=FALSE, echo=TRUE}
+# Clean the workspace, remove all existing Objects
+rm(list=ls())
+```
+
+```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
+library(knitr)
+# Set RMarkdown plots to a default 12 by 8 inches
+knitr::opts_chunk$set(fig.width=12, fig.height=8)
+```
+
+<!-- Include the Introduction Rmd file -->
+```{r child = 'rmd/Introduction.rmd'}
+```
+
+<!-- Include the Answers Rmd file -->
+```{r child = 'rmd/Answers.rmd'}
+```
+
+<!-- Include the Conclusion Rmd file -->
+```{r child = 'rmd/Conclusion.rmd'}
+```
+
+<!-- Include the Codebook Rmd file -->
+```{r child = 'rmd/Codebook.rmd'}
+```
+
+## Appendix
+### File Definitions
+- Project Directories, Documentation, Source Code, Data
+    - <Project Root>/
+        - MSDS_6306_Sect_402_Case_Study_01.Rmd
+            - The main RMarkdown file.  Use this file to knit the report.
+        - MSDS_6306_Sect_402_Case_Study_01.html
+            - This is the knitted report.
+        - README.md
+            - The file you are looking at right now.
+        - Solution.R
+            - This is the same R code to produce the results, minus all of the RMarkdown.
+        - Writeup_CaseStudy1_LEP_v1.txt
+            - TODO: define what this is
+        - Tidy_Recipe.R
+            - If you want to just build the tidy dataset, run this file.
+        - Case_Study_code_file_v1
+            - TODO: define what this is, move it to archive, or delete it.
+        - resources.txt
+            - TODO: define what this is, move it to archive, or delete it.
+        - CaseStudy1.pdf
+            - TODO: define what this is, move it to archive, or delete it.
+    - archive/
+        - Exactly what is says.
+    - code/
+        - Re-usable chunks of code used in both the main project Rmd file, the Solution.R file and Tidy_Recipe.R.
+        - 00_Setup.R
+            - This sets the R environment up for the all of the analyses to be run.
+        - 00_LoadAndPrepare.R
+            - Loads the data, and prepares it for analysis.
+        - 01_Question_01.R
+            - Performs the operations to answer the first question.
+        - 01_Question_01.tidy.R
+            - Performs the oprations to create the tidy dataset needed for Question 1, and all other questions.
+        - 02_Question_02.R
+            - Performs the operations to answer the second question.
+        - 02_Question_02.tidy.R
+            - Performs the oprations to create the tidy dataset needed for Question 2, and all other questions.
+        - 03_Question_03.R
+            - Performs the operations to answer the third question.
+        - 03_Question_03.tidy.R
+            - Performs the oprations to create the tidy dataset needed for Question 3, and all other questions.
+        - 04_Question_04.R
+            - Performs the operations to answer the fourth question.
+        - 05_Question_05.R
+            - Performs the operations to answer the fifth question.
+        - 06_Question_06.R
+            - Performs the operations to answer the sixth question.
+        - 07_Question_07.R
+            - Performs the operations to answer the seventh question.
+    - rmd/
+        - Files in this directory are included into the main file when the document is knitted together.  They are here mainly for organizational purposes.
+        - Answers.Rmd
+            - Human readable, textual answers in prose form.  These are the formal answers the the posed questions.
+        - Codebook.Rmd
+            - The codebook, defining the uncleaned data, as well as the tidy data.
+        - Introduction.Rmd
+            - Project introduction.
+    - data/
+        - Breweries.csv
+        - Beers.csv
+Directories not managed by Git
+- data/tidy/  :  This is where the tidy dataset are stored when they are created by running the Analysis.  This is transient storage.
+- tmp/        :  Transient storage for graphics and other intermediary files.
+
+### Source Code
+#### Required Libraries
+1. deplyr    - To Install: `install.packages("deplyr")`
+1. ggplot2   - To Install: `install.packages("ggplot2")`
+1. doBy      - To Install: `install.packages("doBy")`
+1. stringr   - To Install: `install.packages("stringr")`
+1. reshape2  - To Install: `install.packages("reshape2")`
+1. gridExtra - To Install: `install.packages("gridExtra")`
+
+#### Case Study Solution
+
+```{r, results='hide', message=FALSE, warning=FALSE}
+#
+# NOTE:
+# If you add any libraries to this file, make sure you add the library to the
+# 'ENVIRONMENT' section of the file: code/00_LoadAndPrepare.R
+#
+library(dplyr)
+library(ggplot2)
+library(doBy)
+library(stringr)
+library(reshape2)
+library(gridExtra)
+```
+
+```{r, results='hide', message=FALSE, warning=FALSE, echo=FALSE}
+#
+# This imports the R scripts, but does not execute them yet.
+# They are executed later in the next code chunk
+read_chunk('code/00_LoadAndPrepare.R')
+read_chunk('code/01_Question_01.R')
+read_chunk('code/02_Question_02.R')
+read_chunk('code/03_Question_03.R')
+read_chunk('code/04_Question_04.R')
+read_chunk('code/05_Question_05.R')
+read_chunk('code/06_Question_06.R')
+read_chunk('code/07_Question_07.R')
+
+#
+# In RStudio the next block of code may look like it has a compile or syntax
+#    error in the editor.  However, if you run 'Knit', the document will build
+#    without error.  It will give you and error:  "Unexpected token '<'"
+#
+```
+
+
+```{r}
+<<LoadAndPrepare>>
+<<Question_01>>
+<<Question_02>>
+<<Question_03>>
+<<Question_04>>
+<<Question_05>>
+<<Question_06>>
+<<Question_07>>
+```
